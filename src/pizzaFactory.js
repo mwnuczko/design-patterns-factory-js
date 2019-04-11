@@ -1,6 +1,10 @@
+const VeggiePizza = require('./veggiePizza');
+
 class PizzaFactory {
     createPizza (pizzaType) {
-        return {};
+        switch (pizzaType) {
+            case 'VeggiePizza':
+                return new VeggiePizza().prepare();
     };
 }
 
